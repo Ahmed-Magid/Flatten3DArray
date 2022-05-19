@@ -109,6 +109,7 @@ int main() {
     std::cout << "Enter the array's depth: ";
     std::cin >> depth;
     My3DArray<int> my3DArray(width, height, depth);
+    std::cout << "Enter array elements:\n";
     for (int i = 0; i < my3DArray.getWidth(); i++) {
         for (int j = 0; j < my3DArray.getHeight(); j++) {
             for (int k = 0; k < my3DArray.getDepth(); k++) {
@@ -118,6 +119,7 @@ int main() {
         }
     }
     int* oneDArray = my3DArray.to1DArray();
+    std::cout << "Flattened 1D array is: ";
     for (int i = 0; i < my3DArray.oneDArraySize(); i++)
         std::cout << oneDArray[i] << ' ';
     return 0;
